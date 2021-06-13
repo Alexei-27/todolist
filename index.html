@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="header">Список дел</h1>
+        <ul class="list">
+            <li class="list-item">
+                <input type="checkbox" class="custom-checkbox" id="checkbox-1" name="checkbox-1" value="yes"/>
+                <label for="checkbox-1">Выучить HTML</label>
+                <button class="btm-del">
+                    <img src="img/trash.svg" alt="Удалить">
+                </button>
+                <button class="btm-edit">
+                    <img src="img/edit.svg" alt="Редактировать">
+                </button>
+            </li>
+            <li class="list-item">
+                <input type="checkbox" class="custom-checkbox" id="checkbox-2" name="checkbox-2" value="yes"/>
+                <label for="checkbox-2">Выучить CSS</label>
+                <button class="btm-del">
+                    <img src="img/trash.svg" alt="Удалить">
+                </button>
+                <button class="btm-edit">
+                    <img src="img/edit.svg" alt="Редактировать">
+                </button>
+            </li>
+            <li class="list-item">
+                <input type="checkbox" class="custom-checkbox" id="checkbox-3" name="checkbox-3" value="yes"/>
+                <label for="checkbox-3">Выучить JavaScript</label>
+                <button class="btm-del">
+                    <img src="img/trash.svg" alt="Удалить">
+                </button>
+                <button class="btm-edit">
+                    <img src="img/edit.svg" alt="Редактировать">
+                </button>
+            </li>
+        </ul>
+        <button id="new" class="btn-new-task">+</button>
+    </div>
+</body>
+</html>
