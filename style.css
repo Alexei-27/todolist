@@ -87,24 +87,28 @@ body {
     list-style-type: none;
     padding-left: 0;
 }
-.btm-del {
-    float: right;
+.list-item {
+    display: flex;
+}
+.label {
+    flex-grow: 1;
+}
+.btn-del {
     border: none;
     background-color: transparent;
     cursor: pointer;
 }
-.btm-del img {
+.btn-del img {
     width: 15px;
     height: 15px;
     
 }
-.btm-edit {
-    float: right;
+.btn-edit {
     border: none;
     background-color: transparent;
     cursor: pointer;
 }
-.btm-edit img {
+.btn-edit img {
     width: 15px;
     height: 15px;
     
