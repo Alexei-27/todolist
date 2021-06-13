@@ -36,10 +36,10 @@ body {
     height: 60px;
     border-radius: 50%;
     font-size: 30px;
-  }
-  .btn-new-task:hover {
-      color: var(--green-dark2);
-  }
+}
+.btn-new-task:hover {
+    color: var(--green-dark2);
+}
 
 #new:hover {
     border-radius: 50%;
