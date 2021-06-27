@@ -8,15 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Добавить задачу</title>
     <link rel="stylesheet" href="/style.css">
+    <script defer src="/js/add.js"></script>
 </head>
 <body>
-    <div class="wrapper">
+    <form id="form" class="wrapper">
         <h3 class="header">Название задачи</h3>
-        <input type="text" class="new-task" size="50" placeholder="Введите название задачи"/>
+        <input name="title" type="text" class="new-task" size="50" placeholder="Введите название задачи"/>
         <h3 class="header">Описание задачи</h3>
-        <textarea class="desc-task" id="desc-task" placeholder="Введите описание задачи"></textarea>
-        <button id="add" class="btn-add-task">Добавить задачу</button>
+        <textarea name="description" class="desc-task" id="desc-task" placeholder="Введите описание задачи"></textarea>
+        <button type="submit" id="add" class="btn-add-task">Добавить задачу</button>
         <a href="/" class="exit">x</a>
-    </div>
+    </form>
 </body>
 </html>
