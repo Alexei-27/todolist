@@ -3,7 +3,6 @@ const data = JSON.parse(localStorage.getItem('tasks'));
 const list = document.getElementById("task-list")
 
 function handleCheckboxCheck(event) {
-    // console.log('Helll', event.target.checked, event.target.id)
     for(let index = 0; index < data.length; index++) {
         if(data[index].id == event.target.id) {
             data[index].done = event.target.checked;           
@@ -42,25 +41,13 @@ for (let index = 0; index < data.length; index++) {
     btnEd.innerHTML = '<img src="img/edit.svg" alt="Редактировать">' 
     li.append(btnEd)
     
-    // li.innerHTML += `
-    // <label for="checkbox-${index}" class="label">
-    //     ${data[index].title}
-    // </label>
-    // <button class="btn-edit">
-    //     <img src="img/edit.svg" alt="Редактировать">
-    // </button>
-    // `
-    
     const btnDel = document.createElement("button")
     btnDel.classList.add("btn-del")
     btnDel.innerHTML = '<img src="img/trash.svg" alt="Удалить"></img>'
     li.append(btnDel)
     btnDel.addEventListener("click", function(event) {
         list.removeChild(li);
-        data.splice(index, index);
-        console.log(id);
-        console.log(data);
-        console.log(index);
+        data.splice(index, 1);
         const newTaskString = JSON.stringify(data);
         localStorage.setItem('tasks', newTaskString); 
     })
