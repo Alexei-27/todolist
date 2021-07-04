@@ -1,17 +1,9 @@
 const data = JSON.parse(localStorage.getItem('tasks'));
 
-// const data = [  
-    // {
-    //     title: "Выучить HTML",
-    //     description: "Освоить базовые навыки разметки страницы",
-    //     done: true
-    // },
-    
-
 const list = document.getElementById("task-list")
 
-function handleChecboxCheck(event) {
-    console.log('Helll', event.target.checked, event.target.id)
+function handleCheckboxCheck(event) {
+    // console.log('Helll', event.target.checked, event.target.id)
     for(let index = 0; index < data.length; index++) {
         if(data[index].id == event.target.id) {
             data[index].done = event.target.checked;           
@@ -20,7 +12,6 @@ function handleChecboxCheck(event) {
     const newTaskString = JSON.stringify(data);
     localStorage.setItem('tasks', newTaskString); 
 }
-
 
 for (let index = 0; index < data.length; index++) {
     
@@ -33,7 +24,7 @@ for (let index = 0; index < data.length; index++) {
     checkBox.checked = data[index].done
     checkBox.type = 'checkbox'
     li.append(checkBox)
-    checkBox.addEventListener('change', handleChecboxCheck)
+    checkBox.addEventListener('change', handleCheckboxCheck)
 
     const label = document.createElement('label')
     label.classList.add('label')
@@ -59,17 +50,22 @@ for (let index = 0; index < data.length; index++) {
     //     <img src="img/edit.svg" alt="Редактировать">
     // </button>
     // `
-    list.append(li)
-    li.classList.add("list-item")
+    
     const btnDel = document.createElement("button")
     btnDel.classList.add("btn-del")
     btnDel.innerHTML = '<img src="img/trash.svg" alt="Удалить"></img>'
     li.append(btnDel)
-    btnDel.addEventListener("click", function() {
-        console.log(data[index].title)
-        list.removeChild(li)
+    btnDel.addEventListener("click", function(event) {
+        list.removeChild(li);
+        data.splice(index, index);
+        console.log(id);
+        console.log(data);
+        console.log(index);
+        const newTaskString = JSON.stringify(data);
+        localStorage.setItem('tasks', newTaskString); 
     })
     
-   
-
+    list.append(li)
+    li.classList.add("list-item")
+    
 }

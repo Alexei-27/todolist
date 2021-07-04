@@ -212,6 +212,7 @@ body {
     border: 1px solid #ccc;
     line-height: 25px;
     display: none;
+    width: 65%;
 }
 .list-item:hover .desc {
     display: block;
