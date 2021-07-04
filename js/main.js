@@ -54,5 +54,23 @@ for (let index = 0; index < data.length; index++) {
     
     list.append(li)
     li.classList.add("list-item")
-    
 }
+
+const btnTheme = document.getElementById('btn-theme');
+btnTheme.addEventListener('click', function() {
+    const a = document.body.className
+    switch (a) {
+        case 'light-theme': 
+        document.body.className = 'dark-theme';
+        break;
+
+        case 'dark-theme': 
+        document.body.className = 'military-theme';
+        break;
+        
+        case 'military-theme': 
+        document.body.className = 'light-theme';
+        break;
+
+    } 
+})
